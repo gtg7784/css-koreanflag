@@ -1,33 +1,72 @@
-.App {
-  text-align: center;
-}
+$red: #CD313A;
+$blue: #0047A0;
+$black:	#0E0E0E;
+$white:	#FFFFFF;
+$criteria: 200px;
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  & > .flag{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: calc(#{$criteria} * 3);
+    height: calc(#{$criteria} * 2);
+    border: 1px solid #000;
+
+    & > .bars{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    & > .middle{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      & > .ovalwrap{
+        width: $criteria;
+        height: $criteria;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background: linear-gradient( $red 50%, $blue 50%);
+        transform: rotate(45deg);
+        border-radius: $criteria;
+      }
+    }
+  }
 }
 
-.App-link {
-  color: #61dafb;
+.bar{
+  width: calc(#{$criteria} /2);
+  height: calc(#{$criteria} /12);
+  background-color: $black;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  
+  &:not(:first-child){
+    margin-top: calc(#{$criteria} /24);
+  }
+
+  & > .separate{
+    width: calc(#{$criteria} /24);
+    height: calc(#{$criteria} /12);
+    background-color: $white;
+    border-top: 2px solid #fff;
+    margin-top: -1px;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.gon, .gam{
+  transform: rotate(45deg);
+}
+
+.geon, .ri{
+  transform: rotate(135deg);
 }
