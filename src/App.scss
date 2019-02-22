@@ -2,7 +2,7 @@ $red: #CD313A;
 $blue: #0047A0;
 $black:	#0E0E0E;
 $white:	#FFFFFF;
-$criteria: 200px;
+$criteria: 450px;
 
 .App{
   display: flex;
@@ -13,9 +13,11 @@ $criteria: 200px;
     flex-direction: column;
     justify-content: center;
 
-    width: calc(#{$criteria} * 3);
-    height: calc(#{$criteria} * 2);
-    border: 1px solid #000;
+    // width: calc(#{$criteria} * 3);
+    // height: calc(#{$criteria} * 2);
+    width: 100vw;
+    height: 100vh;
+    padding: 0 250px;
 
     & > .bars{
       display: flex;
@@ -30,13 +32,29 @@ $criteria: 200px;
 
       & > .ovalwrap{
         width: $criteria;
-        height: $criteria;
+        height: calc(#{$criteria}/2);
+        padding: calc(#{$criteria}/4) 0;
         display: flex;
         justify-content: center;
-        flex-direction: column;
+        flex-direction: row;
         background: linear-gradient( $red 50%, $blue 50%);
-        transform: rotate(45deg);
+        transform: rotate(35deg);
         border-radius: $criteria;
+        margin-top: -50px;
+        margin-bottom: -50px;
+
+        & > .oval{
+          width: calc(#{$criteria}/2);
+          height: calc(#{$criteria}/2);
+          border-radius: calc(#{$criteria}/2);
+
+          &:nth-child(1){
+            background-color: $red;
+          }
+          &:nth-child(2){
+            background-color: $blue;
+          }
+        }
       }
     }
   }

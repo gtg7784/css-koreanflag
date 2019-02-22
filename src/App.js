@@ -5,7 +5,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        태극기
         <div className="flag">
           <div className="bars">
             <div className="geon">
