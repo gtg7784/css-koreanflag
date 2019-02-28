@@ -11,12 +11,11 @@ $criteria: 450px;
   & > .flag{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-
-    // width: calc(#{$criteria} * 3);
-    // height: calc(#{$criteria} * 2);
-    width: 100vw;
-    height: 100vh;
+    justify-content: center; 
+    width: calc(#{$criteria} * 3);
+    height: calc(#{$criteria} * 2);
+    // width: 100vw;
+    // height: 100vh;
     padding: 0 250px;
 
     & > .bars{
